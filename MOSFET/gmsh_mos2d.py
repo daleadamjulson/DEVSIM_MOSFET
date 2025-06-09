@@ -21,7 +21,7 @@ import os
 
 output_dir ="results"
 
-os.makedirs(output_dir)
+os.makedirs(output_dir, exist_ok=True)
 
 devsim.set_parameter(name = "extended_solver", value=True)
 devsim.set_parameter(name = "extended_model", value=True)

@@ -16,14 +16,14 @@ for i, dir_path in enumerate(directories):
     data = np.load(file_path)
     print(data)
 
-    drain_voltages = data["gate_voltage"]
-    drain_currents_drain = data["drain_currents_drain"]
+    drain_voltages = data["gate_voltages"]
+    drain_currents_drain = data["drain_currents_gate"]
 
     plt.plot(drain_voltages, drain_currents_drain, label=f"{titles[i]}")
 
-plt.xlabel("Drain Voltage (V)")
+plt.xlabel("Gate Voltage (V)")
 plt.ylabel("Drain Current (A)")
-plt.title("Drain Voltage vs. Drain Current (Drain Terminal)")
+plt.title("Gate Voltage vs. Drain Current (Drain Terminal)")
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
