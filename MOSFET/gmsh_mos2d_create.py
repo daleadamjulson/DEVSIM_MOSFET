@@ -113,6 +113,3 @@ if __name__ == "__main__":
     device ="mos2d"
     outfile="gmsh_mos2d_out.msh"
     infile="gmsh_mos2d.msh"
-
-    create(device=device, infile=infile, outfile=outfile)
-
